@@ -1,0 +1,9 @@
+*.log
+*.pyc
+*.pot
+env_vars.py
+__pycache__
+.DB_Store
+db.sqlite3
+/media
+/static
