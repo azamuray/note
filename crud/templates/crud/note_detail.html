@@ -1,0 +1,8 @@
+{% extends 'crud/base.html' %}
+{% block content %}
+	<h3><a href="{% url 'crud:note-list' %}">Все заметки</a> > {{ note.title }}</h3>
+	<hr>
+	<h3>{{ note.title }}</h3>
+	<p>{{ note.body }}</p>
+	<p>от: {{ note.creator }}</p>
+{% endblock %}

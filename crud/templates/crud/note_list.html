@@ -1,7 +1,10 @@
-<h1>Notes</h1>
-{% for note in note_list %}
-	<hr>
-	<h3>{{ note.title }}</h3>
-	<p>{{ note.body }}</p>
-	<p>от: {{ note.creator }}</p>
-{% endfor %}
+{% extends 'crud/base.html' %}
+{% block content %}
+	<h3><a href="{% url 'crud:note-list' %}">Все заметки</a></h3>
+	{% for note in note_list %}
+		<hr>
+		<h3><a href="{% url 'crud:note-detail' note.id %}">{{ note.title }}</a></h3>
+		<p>{{ note.body }}</p>
+		<p>от: {{ note.creator }}</p>
+	{% endfor %}
+{% endblock %}
