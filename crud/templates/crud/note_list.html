@@ -1,0 +1,7 @@
+<h1>Notes</h1>
+{% for note in note_list %}
+	<hr>
+	<h3>{{ note.title }}</h3>
+	<p>{{ note.body }}</p>
+	<p>от: {{ note.creator }}</p>
+{% endfor %}
