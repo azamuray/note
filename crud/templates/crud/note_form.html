@@ -1,8 +1,8 @@
 {% extends 'crud/base.html' %}
 {% block content %}
 	<h3><a href="{% url 'crud:note-list' %}">Все заметки</a> > Новая запись</h3>
-	<form method="post">{% csrf_token %}
+	<form id="form" name="form">{% csrf_token %}
 		{{ form.as_p }}
-		<button type="submit">Добавить</button>
+		<button>Добавить</button>
 	</form>
 {% endblock %}
