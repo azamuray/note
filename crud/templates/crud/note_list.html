@@ -1,5 +1,8 @@
 {% extends 'crud/base.html' %}
 {% block content %}
+	{% if user.is_authenticated %}
+		<a href="{% url 'crud:note-create' %}"><button>+ добавить</button></a>
+	{% endif %}
 	<h3><a href="{% url 'crud:note-list' %}">Все заметки</a></h3>
 	{% for note in note_list %}
 		<hr>
